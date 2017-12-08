@@ -97,7 +97,7 @@ public class Subcategory implements Serializable{
         return result;
     }
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "category_code", referencedColumnName = "category_code", nullable = false)
     public Category getCategory() {
         return category;
